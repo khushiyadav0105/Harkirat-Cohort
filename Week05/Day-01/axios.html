@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.6/axios.min.js">        //this url is going to use all the js code from this website and use it in our code
+     </script> 
+    
+</head>
+<body>
+
+    <!-- Axios is a http client which let's us send a http request to the server and get back the response and change it to json on it's own 
+     -->
+    Linkdin
+    <div id="posts"></div> 
+    
+</body>
+<script>
+    async function getRecentPosts() {
+        const response = await axios.get("URL_here");
+
+        // this code iss similar to the fetch code4
+
+        document.getElementById("posts").innerHTML = response.data.title;
+
+        
+    }
+</script>
+</html>

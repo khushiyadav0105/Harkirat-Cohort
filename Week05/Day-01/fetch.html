@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Linkdin        
+    <!-- we are making a page like linkdin this is done as an example to explain fetch function
+    so in body we are writing linkdin and then a div contains the id post, this div will show the posts in linkdin and to show those posts we have to work upon the data using fetch function -->
+    <div id="posts"></div>
+    <script>
+        async function getRecentPosts(){
+            const response = await fetch("TYPE_URL"); // fetchong the data from the server.
+            const data = await response.json(); // convert the data to json
+            console.log(data);  
+            document.getElementById("posts").innerHTML = data.body;    // this is the way to insert new linkdin posts into that div.
+
+            
+        }
+    </script>
+</body>
+
+</html>
